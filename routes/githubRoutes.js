@@ -14,4 +14,5 @@ router.get("/profiles", getProfiles);
 
 router.get("/profiles/:id", getSingleProfile);
 
+
 module.exports = router;
