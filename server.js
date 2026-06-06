@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.send("API is running");
 });
 
+app.get("/check-token", (req, res) => {
+  res.json({
+    tokenExists: !!process.env.GITHUB_TOKEN
+  });
+});
 
 app.use("/api", require("./routes/githubRoutes"));
 
